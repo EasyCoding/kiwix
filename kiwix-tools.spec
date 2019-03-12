@@ -10,6 +10,7 @@ Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
+BuildRequires: pugixml-devel
 BuildRequires: ninja-build
 BuildRequires: zlib-devel
 BuildRequires: gcc-c++
