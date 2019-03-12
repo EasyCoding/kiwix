@@ -42,6 +42,9 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %install
 %meson_install
 
+# Fedora's version of pugixml package does not provide pkg-config file.
+sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
+
 %files
 %doc AUTHORS COPYING ChangeLog README.md
 %license COPYING
