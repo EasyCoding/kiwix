@@ -41,7 +41,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %meson_install
 
 %files
-%doc AUTHORS COPYING ChangeLog
+%doc AUTHORS COPYING ChangeLog README.md
 %license COPYING
 %{_libdir}/%{name}.so.4*
 
