@@ -32,7 +32,7 @@ tools.
 %meson_install
 
 %files
-%doc AUTHORS COPYING Changelog README.md
+%doc AUTHORS Changelog README.md
 %license COPYING
 %{_bindir}/kiwix*
 %{_mandir}/man1/kiwix*.1*

@@ -46,7 +46,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 
 %files
-%doc AUTHORS COPYING ChangeLog README.md
+%doc AUTHORS ChangeLog README.md
 %license COPYING
 %{_bindir}/kiwix-compile-resources
 %{_libdir}/libkiwix.so.4*
