@@ -18,7 +18,7 @@ BuildRequires: gcc
 BuildArch: noarch
 
 %description
-Mustache implementation for modern C++ (requires C++11).
+Text templates implementation for modern C++ (requires C++11).
 
 %package devel
 Summary: Development files for %{name}
