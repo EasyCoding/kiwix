@@ -2,7 +2,7 @@ Name: libzim
 Version: 4.0.5
 Release: 1%{?dist}
 
-License: GPLv2
+License: GPLv2 and ASL 2.0 and BSD
 Summary: Reference implementation of the ZIM specification
 
 URL: https://github.com/openzim/%{name}
