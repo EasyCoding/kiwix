@@ -1,5 +1,5 @@
 Name: kiwix-tools
-Version: 1.0.0
+Version: 1.1.0
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -7,6 +7,10 @@ Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Patch0: %{name}-fix-flags.patch
+
+# https://github.com/kiwix/kiwix-tools/commit/336cbe691d6bb3f0b28344e5714da2d4524a6278
+Patch100: %{name}-no-rpath.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
@@ -22,7 +26,7 @@ The Kiwix tools is a collection of Kiwix related command line
 tools.
 
 %prep
-%autosetup
+%autosetup -p1
 
 %build
 %meson
@@ -39,5 +43,8 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Wed Apr 10 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 1.1.0-1
+- Updated to version 1.1.0.
+
 * Tue Mar 12 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 1.0.0-1
 - Initial SPEC release.
