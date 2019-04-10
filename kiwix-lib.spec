@@ -12,7 +12,7 @@ BuildRequires: mustache-devel
 BuildRequires: pugixml-devel
 BuildRequires: libcurl-devel
 BuildRequires: libicu-devel
-BuildRequires: libzim-devel
+BuildRequires: zimlib-devel
 BuildRequires: gtest-devel
 BuildRequires: ninja-build
 BuildRequires: gcc-c++
