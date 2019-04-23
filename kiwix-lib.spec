@@ -7,7 +7,6 @@ Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0: %{name}-fix-flags.patch
 
 BuildRequires: mustache-devel
 BuildRequires: pugixml-devel
@@ -35,6 +34,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %prep
 %autosetup -p1
+sed -e "s/, 'werror=true'//" -i meson.build
 
 %build
 %meson

@@ -9,7 +9,6 @@ Summary: Reference implementation of the ZIM specification
 
 URL: https://github.com/openzim/%{appname}
 Source0: %{url}/archive/%{version}.tar.gz
-Patch0: %{name}-fix-flags.patch
 
 BuildRequires: xapian-core-devel
 BuildRequires: libicu-devel
@@ -35,6 +34,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %prep
 %autosetup -n %{appname}-%{version} -p1
+sed -e "s/, 'werror=true'//" -i meson.build
 
 %build
 %meson

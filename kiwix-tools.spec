@@ -7,7 +7,6 @@ Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0: %{name}-fix-flags.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
@@ -24,6 +23,7 @@ tools.
 
 %prep
 %autosetup -p1
+sed -e "s/, 'werror=true'//" -i meson.build
 
 %build
 %meson
