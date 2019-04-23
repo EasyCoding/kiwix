@@ -9,8 +9,7 @@ Summary: Reference implementation of the ZIM specification
 
 URL: https://github.com/openzim/%{appname}
 Source0: %{url}/archive/%{version}.tar.gz
-Patch0: %{name}-no-rpath.patch
-Patch1: %{name}-fix-flags.patch
+Patch0: %{name}-fix-flags.patch
 
 BuildRequires: xapian-core-devel
 BuildRequires: libicu-devel
