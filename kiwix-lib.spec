@@ -50,7 +50,7 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %doc AUTHORS ChangeLog README.md
 %license COPYING
 %{_bindir}/kiwix-compile-resources
-%{_libdir}/libkiwix.so.4*
+%{_libdir}/libkiwix.so.5*
 
 %files devel
 %{_includedir}/kiwix
