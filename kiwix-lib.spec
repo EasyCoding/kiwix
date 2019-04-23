@@ -1,5 +1,5 @@
 Name: kiwix-lib
-Version: 4.1.0
+Version: 5.0.0
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -7,8 +7,7 @@ Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0: %{name}-no-rpath.patch
-Patch1: %{name}-fix-flags.patch
+Patch0: %{name}-fix-flags.patch
 
 BuildRequires: mustache-devel
 BuildRequires: pugixml-devel
@@ -59,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Tue Apr 23 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.0.0-1
+- Updated to version 5.0.0.
+
 * Wed Apr 10 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 4.1.0-1
 - Updated to version 4.1.0.
 
