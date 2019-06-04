@@ -1,5 +1,5 @@
 Name: kiwix-lib
-Version: 5.0.0
+Version: 5.1.0
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -58,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Tue Jun 04 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.1.0-1
+- Updated to version 5.1.0.
+
 * Tue Apr 23 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.0.0-1
 - Updated to version 5.0.0.
 
