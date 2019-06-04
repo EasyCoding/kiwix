@@ -46,7 +46,7 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %files
 %doc AUTHORS ChangeLog README.md
 %license COPYING
-%{_libdir}/%{appname}.so.4*
+%{_libdir}/%{appname}.so.5*
 
 %files devel
 %{_includedir}/zim
