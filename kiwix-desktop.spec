@@ -1,22 +1,27 @@
 %define betasuff 5
+%define gitversion beta%{betasuff}
 
 Name: kiwix-desktop
 Version: 2.0
-Release: 0.1.beta%{betasuff}%{?dist}
+Release: 0.1.%{gitversion}%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
 
 URL: https://github.com/kiwix/%{name}
-Source0: %{url}/archive/%{version}-beta%{betasuff}.tar.gz
+Source0: %{url}/archive/%{version}-%{gitversion}.tar.gz
 
 Requires: hicolor-icon-theme
 
+BuildRequires: qt5-qtwebengine-devel
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
 BuildRequires: qt5-qtbase-devel
+BuildRequires: kiwix-lib-devel
+BuildRequires: mustache-devel
+BuildRequires: pugixml-devel
 BuildRequires: zimlib-devel
-BuildRequires: kiwix-lib
+BuildRequires: qt5-linguist
 BuildRequires: gcc-c++
 BuildRequires: aria2
 BuildRequires: gcc
@@ -27,8 +32,8 @@ and Windows. You can download and view your zim files as you
 which.
 
 %prep
-%autosetup -n %{name}-%{version}-beta%{betasuff}
-sed -e "/static {/,+2d" -e "/-rpath/d" -i %{name}.pro
+%autosetup -n %{name}-%{version}-%{gitversion}
+sed -e "/static {/,+2d" -e "/-rpath/d" -e "/git describe/c\DEFINES += GIT_VERSION='%{gitversion}'" -e "s/date/date +\%G-\%m-\%d/" -i %{name}.pro
 mkdir -p %{_target_platform}
 
 %build
