@@ -1,5 +1,5 @@
-%define betasuff 5
-%define gitversion beta%{betasuff}
+%define betasuffix 5
+%define gitversion beta%{betasuffix}
 
 Name: kiwix-desktop
 Version: 2.0
@@ -45,20 +45,19 @@ popd
 
 %install
 %make_install INSTALL_ROOT=%{buildroot} -C %{_target_platform}
-%find_lang %{name} --with-qt
 
 %check
-appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/%{name}.appdata.xml
+appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/*.appdata.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
-%files -f %{name}.lang
+%files
 %doc ChangeLog README.md
 %license LICENSE
 %{_bindir}/%{name}
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
-%{_datadir}/applications/%{name}.desktop
-%{_metainfodir}/%{name}.appdata.xml
+%{_datadir}/applications/*.desktop
 %{_datadir}/mime/packages/*.xml
+%{_metainfodir}/*.appdata.xml
 
 %changelog
 * Tue Jun 04 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.1.beta5
