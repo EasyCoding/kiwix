@@ -1,7 +1,7 @@
 %global appname libzim
 
 Name: zimlib
-Version: 4.0.7
+Version: 5.0.0
 Release: 1%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
@@ -54,6 +54,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Tue Jun 04 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.0.0-1
+- Updated to version 5.0.0.
+
 * Tue Apr 23 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 4.0.7-1
 - Updated to version 4.0.7.
 
