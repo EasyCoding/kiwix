@@ -27,6 +27,9 @@ BuildRequires: gcc-c++
 BuildRequires: aria2
 BuildRequires: gcc
 
+# Required qt5-qtwebengine is not available on some arches.
+ExclusiveArch: %{qt5_qtwebengine_arches}
+
 %description
 The Kiwix-desktop is a view/manager of zim files for GNU/Linux
 and Windows. You can download and view your zim files as you
