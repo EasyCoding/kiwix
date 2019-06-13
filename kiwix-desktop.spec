@@ -12,6 +12,7 @@ URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}-%{gitversion}.tar.gz
 
 Requires: hicolor-icon-theme
+Requires: shared-mime-info
 
 BuildRequires: qt5-qtwebengine-devel
 BuildRequires: desktop-file-utils
