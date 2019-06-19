@@ -3,7 +3,7 @@
 
 Name: kiwix-desktop
 Version: 2.0
-Release: 0.1.%{gitversion}%{?dist}
+Release: 0.2.%{gitversion}%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -13,6 +13,7 @@ Source0: %{url}/archive/%{version}-%{gitversion}.tar.gz
 
 Requires: hicolor-icon-theme
 Requires: shared-mime-info
+Requires: aria2%{?_isa}
 
 BuildRequires: qt5-qtwebengine-devel
 BuildRequires: desktop-file-utils
@@ -64,5 +65,8 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Wed Jun 19 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.2.beta5
+- Added aria2 to dependencies.
+
 * Tue Jun 04 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.1.beta5
 - Initial SPEC release.
