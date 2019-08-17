@@ -1,8 +1,8 @@
 %global appname libzim
 
 Name: zimlib
-Version: 5.0.0
-Release: 2%{?dist}
+Version: 5.0.1
+Release: 1%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
 Summary: Reference implementation of the ZIM specification
@@ -54,6 +54,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.0.1-1
+- Updated to version 5.0.1.
+
 * Sat Jul 27 2019 Fedora Release Engineering <releng@fedoraproject.org> - 5.0.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
