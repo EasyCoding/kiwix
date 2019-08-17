@@ -1,6 +1,6 @@
 Name: kiwix-lib
-Version: 5.1.0
-Release: 2%{?dist}
+Version: 5.2.0
+Release: 1%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -58,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.2.0-1
+- Updated to version 5.2.0.
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 5.1.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
