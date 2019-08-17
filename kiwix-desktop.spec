@@ -1,9 +1,9 @@
-%define betasuffix 5
-%define gitversion beta%{betasuffix}
+%define betasuffix 1
+%define gitversion rc%{betasuffix}
 
 Name: kiwix-desktop
 Version: 2.0
-Release: 0.3.%{gitversion}%{?dist}
+Release: 0.4.%{gitversion}%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.4.rc1
+- Updated to version 2.0 RC1.
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.0-0.3.beta5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
