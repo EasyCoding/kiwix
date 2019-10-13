@@ -1,9 +1,9 @@
-%define betasuffix 1
+%define betasuffix 3
 %define gitversion rc%{betasuffix}
 
 Name: kiwix-desktop
 Version: 2.0
-Release: 0.4.%{gitversion}%{?dist}
+Release: 0.5.%{gitversion}%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Sun Oct 13 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.5.rc3
+- Updated to version 2.0 RC3.
+
 * Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.4.rc1
 - Updated to version 2.0 RC1.
 
