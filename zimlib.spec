@@ -1,7 +1,7 @@
 %global appname libzim
 
 Name: zimlib
-Version: 5.0.1
+Version: 6.0.2
 Release: 1%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
@@ -46,7 +46,7 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %files
 %doc AUTHORS ChangeLog README.md
 %license COPYING
-%{_libdir}/%{appname}.so.5*
+%{_libdir}/%{appname}.so.6*
 
 %files devel
 %{_includedir}/zim
@@ -54,6 +54,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Sun Oct 13 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 6.0.2-1
+- Updated to version 6.0.2.
+
 * Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 5.0.1-1
 - Updated to version 5.0.1.
 
