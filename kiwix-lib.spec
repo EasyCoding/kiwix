@@ -8,6 +8,7 @@ Summary: Common code base for all Kiwix ports
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires: libmicrohttpd-devel
 BuildRequires: mustache-devel
 BuildRequires: pugixml-devel
 BuildRequires: libcurl-devel
