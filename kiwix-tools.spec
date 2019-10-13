@@ -1,5 +1,5 @@
 Name: kiwix-tools
-Version: 2.1.0
+Version: 3.0.1
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -40,6 +40,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Sun Oct 13 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 3.0.1-1
+- Updated to version 3.0.1.
+
 * Sat Aug 17 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 2.1.0-1
 - Updated to version 2.1.0.
 
