@@ -1,6 +1,6 @@
 Name: kiwix-lib
 Version: 8.1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -59,6 +59,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Fri Nov 01 2019 Pete Walter <pwalter@fedoraproject.org> - 8.1.0-2
+- Rebuild for ICU 65
+
 * Sun Oct 13 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 8.1.0-1
 - Updated to version 8.1.0.
 
