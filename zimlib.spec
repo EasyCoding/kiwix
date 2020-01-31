@@ -2,7 +2,7 @@
 
 Name: zimlib
 Version: 6.0.2
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
 Summary: Reference implementation of the ZIM specification
@@ -54,6 +54,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 6.0.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Fri Nov 01 2019 Pete Walter <pwalter@fedoraproject.org> - 6.0.2-2
 - Rebuild for ICU 65
 
