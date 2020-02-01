@@ -6,7 +6,10 @@ License: GPLv3+
 Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+
+# https://github.com/kiwix/kiwix-lib/pull/319
+Patch100: %{name}-pr319.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: mustache-devel
