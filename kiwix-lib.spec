@@ -1,6 +1,6 @@
 Name: kiwix-lib
-Version: 8.1.0
-Release: 3%{?dist}
+Version: 8.2.2
+Release: 1%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -62,6 +62,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Mon Feb 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 8.2.2-1
+- Updated to version 8.2.2.
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 8.1.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
