@@ -1,12 +1,12 @@
 Name: kiwix-tools
 Version: 3.0.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
@@ -40,6 +40,9 @@ sed -e "s/, 'werror=true'//" -i meson.build
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Mon Feb 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.0.1-3
+- Rebuilt due to kiwix-lib update.
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
