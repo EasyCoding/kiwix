@@ -1,8 +1,8 @@
 %global appname Mustache
 
 Name: mustache
-Version: 3.2.1
-Release: 1%{?dist}
+Version: 4.0
+Release: 2%{?dist}
 
 License: Boost
 Summary: Mustache text templates for modern C++
@@ -47,8 +47,8 @@ pushd %{_target_platform}
 popd
 
 %install
-%{__mkdir_p} %{buildroot}%{_includedir}
-%{__install} -m 0644 -p %{name}.hpp %{buildroot}%{_includedir}
+mkdir -p %{buildroot}%{_includedir}
+install -m 0644 -p %{name}.hpp %{buildroot}%{_includedir}
 
 %files devel
 %doc README.md
@@ -56,5 +56,14 @@ popd
 %{_includedir}/%{name}.hpp
 
 %changelog
+* Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 4.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
+* Mon Jan 06 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 4.0-1
+- Updated to version 4.0.
+
+* Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 3.2.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Tue Mar 12 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 3.2.1-1
 - Initial SPEC release.
