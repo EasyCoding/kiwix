@@ -38,10 +38,9 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %prep
 %autosetup -p1
-sed -e "s/, 'werror=true'//" -i meson.build
 
 %build
-%meson
+%meson -Dwerror=false
 %meson_build
 
 %install
