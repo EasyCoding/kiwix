@@ -1,5 +1,5 @@
 Name: kiwix-lib
-Version: 8.2.2
+Version: 9.1.0
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -7,9 +7,6 @@ Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
-
-# https://github.com/kiwix/kiwix-lib/pull/319
-Patch100: %{name}-pr319.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: mustache-devel
@@ -53,7 +50,7 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %doc AUTHORS ChangeLog README.md
 %license COPYING
 %{_bindir}/kiwix-compile-resources
-%{_libdir}/libkiwix.so.8*
+%{_libdir}/libkiwix.so.9*
 
 %files devel
 %{_includedir}/kiwix
@@ -61,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Thu Apr 09 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 9.1.0-1
+- Updated to version 9.1.0.
+
 * Mon Feb 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 8.2.2-1
 - Updated to version 8.2.2.
 
