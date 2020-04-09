@@ -35,7 +35,7 @@ which.
 
 %prep
 %autosetup -p1
-sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='release'" -e "s/date/date +\%G-\%m-\%d/" -i %{name}.pro
+sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='%{version}'" -e "s/shell date/shell date +\%G-\%m-\%d/g" -e "s@lupdate@%{_libdir}/qt5/bin/lupdate-qt5@g" -e "s@lrelease@%{_libdir}/qt5/bin/lrelease-qt5@g" -i %{name}.pro
 mkdir -p %{_target_platform}
 
 %build
