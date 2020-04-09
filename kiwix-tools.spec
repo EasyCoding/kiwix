@@ -1,12 +1,15 @@
 Name: kiwix-tools
-Version: 3.0.1
-Release: 3%{?dist}
+Version: 3.1.0
+Release: 1%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+
+# https://github.com/kiwix/kiwix-tools/pull/374
+Patch100: %{name}-pr374.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
@@ -39,6 +42,9 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Thu Apr 09 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.0-1
+- Updated to version 3.1.0.
+
 * Mon Feb 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.0.1-3
 - Rebuilt due to kiwix-lib update.
 

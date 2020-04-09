@@ -1,0 +1,24 @@
+From a038d38d5b5b02dbc06891c8340279e6fb81982e Mon Sep 17 00:00:00 2001
+From: Vitaly Zaitsev <vitaly@easycoding.org>
+Date: Thu, 9 Apr 2020 13:01:01 +0200
+Subject: [PATCH] Fixed build after 6ba6046850eb92f6d23408f38a5de93c970720a1
+ commit.
+
+Signed-off-by: Vitaly Zaitsev <vitaly@easycoding.org>
+---
+ meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/meson.build b/meson.build
+index 9959db91..dae140c9 100644
+--- a/meson.build
++++ b/meson.build
+@@ -12,7 +12,7 @@ if static_linkage
+   add_global_link_arguments('-static-libstdc++', '--static', language:'cpp')
+ endif
+ 
+-thread_dep = depenidency('threads')
++thread_dep = dependency('threads')
+ kiwixlib_dep = dependency('kiwix', version:'>=9.1.0', static:static_linkage)
+ microhttpd_dep = dependency('libmicrohttpd', static:static_linkage)
+ z_dep = dependency('zlib', static:static_linkage)
