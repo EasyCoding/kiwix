@@ -1,15 +1,12 @@
-%define betasuffix 4
-%define gitversion rc%{betasuffix}
-
 Name: kiwix-desktop
 Version: 2.0
-Release: 0.7.%{gitversion}%{?dist}
+Release: 1%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
 
 URL: https://github.com/kiwix/%{name}
-Source0: %{url}/archive/%{version}-%{gitversion}.tar.gz
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 Requires: hicolor-icon-theme
 Requires: shared-mime-info
@@ -37,8 +34,8 @@ and Windows. You can download and view your zim files as you
 which.
 
 %prep
-%autosetup -n %{name}-%{version}-%{gitversion}
-sed -e "/static {/,+2d" -e "/-rpath/d" -e "/git describe/c\DEFINES += GIT_VERSION='%{gitversion}'" -e "s/date/date +\%G-\%m-\%d/" -i %{name}.pro
+%autosetup -p1
+sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='release'" -e "s/date/date +\%G-\%m-\%d/" -i %{name}.pro
 mkdir -p %{_target_platform}
 
 %build
@@ -65,6 +62,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Thu Apr 09 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-1
+- Updated to version 2.0.
+
 * Mon Feb 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0-0.7.rc4
 - Updated to version 2.0 RC4.
 
