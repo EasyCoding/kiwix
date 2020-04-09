@@ -8,9 +8,6 @@ Summary: Common code base for all Kiwix ports
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
-# https://github.com/kiwix/kiwix-tools/pull/374
-Patch100: %{name}-pr374.patch
-
 BuildRequires: libmicrohttpd-devel
 BuildRequires: kiwix-lib-devel
 BuildRequires: pugixml-devel
