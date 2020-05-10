@@ -1,5 +1,5 @@
 Name: kiwix-lib
-Version: 9.1.0
+Version: 9.1.2
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -58,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Sun May 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 9.1.2-1
+- Updated to version 9.1.2.
+
 * Thu Apr 09 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 9.1.0-1
 - Updated to version 9.1.0.
 
