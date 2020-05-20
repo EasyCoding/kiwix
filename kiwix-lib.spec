@@ -1,6 +1,6 @@
 Name: kiwix-lib
 Version: 9.1.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -58,6 +58,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Sat May 16 2020 Pete Walter <pwalter@fedoraproject.org> - 9.1.2-2
+- Rebuild for ICU 67
+
 * Sun May 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 9.1.2-1
 - Updated to version 9.1.2.
 
