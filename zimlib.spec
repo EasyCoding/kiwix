@@ -2,7 +2,7 @@
 
 Name: zimlib
 Version: 6.1.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
 Summary: Reference implementation of the ZIM specification
@@ -53,6 +53,9 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Fri May 15 2020 Pete Walter <pwalter@fedoraproject.org> - 6.1.1-2
+- Rebuild for ICU 67
+
 * Sun May 10 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 6.1.1-1
 - Updated to version 6.1.1.
 
