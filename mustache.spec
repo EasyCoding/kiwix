@@ -1,8 +1,8 @@
 %global appname Mustache
 
 Name: mustache
-Version: 4.0
-Release: 2%{?dist}
+Version: 4.1
+Release: 1%{?dist}
 
 License: Boost
 Summary: Mustache text templates for modern C++
@@ -56,6 +56,9 @@ install -m 0644 -p %{name}.hpp %{buildroot}%{_includedir}
 %{_includedir}/%{name}.hpp
 
 %changelog
+* Fri Jun 05 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 4.1-1
+- Updated to version 4.1.
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 4.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
