@@ -8,7 +8,7 @@ License: Boost
 Summary: Mustache text templates for modern C++
 
 URL: https://github.com/kainjow/%{appname}
-Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires: ninja-build
 BuildRequires: gcc-c++
@@ -37,6 +37,7 @@ sed -e '/-Werror/d' -i CMakeLists.txt
 %build
 pushd %{_target_platform}
     %cmake -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release \
     ..
 popd
 %ninja_build -C %{_target_platform}
