@@ -1,5 +1,5 @@
 Name: kiwix-tools
-Version: 3.1.0
+Version: 3.1.1
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -39,6 +39,9 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Wed Jul 01 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.1-1
+- Updated to version 3.1.1.
+
 * Thu Apr 09 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.0-1
 - Updated to version 3.1.0.
 
