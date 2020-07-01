@@ -12,6 +12,7 @@ Requires: hicolor-icon-theme
 Requires: shared-mime-info
 Requires: aria2%{?_isa}
 
+BuildRequires: qtsingleapplication-qt5-devel
 BuildRequires: qt5-qtwebengine-devel
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
@@ -35,18 +36,19 @@ which.
 
 %prep
 %autosetup -p1
-sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='%{version}'" -e "s/shell date/shell date +\%G-\%m-\%d/g" -e "s@lupdate@%{_libdir}/qt5/bin/lupdate-qt5@g" -e "s@lrelease@%{_libdir}/qt5/bin/lrelease-qt5@g" -i %{name}.pro
-mkdir -p %{_target_platform}
+mkdir %{_vpath_builddir}
+sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='%{version}'" -e "s/shell date/shell date +\%G-\%m-\%d/g" -i %{name}.pro
+rm -rf subprojects
 
 %build
-pushd %{_target_platform}
-    %qmake_qt5 PREFIX=%{_prefix} ..
+pushd %{_vpath_builddir}
+    %qmake_qt5 PREFIX=%{_prefix} CONFIG+=qtsingleapplication ..
 popd
 
-%make_build -C %{_target_platform}
+%make_build -C %{_vpath_builddir}
 
 %install
-%make_install INSTALL_ROOT=%{buildroot} -C %{_target_platform}
+%make_install INSTALL_ROOT=%{buildroot} -C %{_vpath_builddir}
 
 %check
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/*.appdata.xml
