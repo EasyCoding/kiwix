@@ -1,7 +1,7 @@
 %global appname libzim
 
 Name: zimlib
-Version: 6.1.7
+Version: 6.1.8
 Release: 1%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
@@ -53,6 +53,9 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Thu Jul 16 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 6.1.8-1
+- Updated to version 6.1.8.
+
 * Wed Jul 01 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 6.1.7-1
 - Updated to version 6.1.7.
 
