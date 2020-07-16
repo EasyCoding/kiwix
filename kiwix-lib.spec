@@ -51,7 +51,7 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %license COPYING
 %{_bindir}/kiwix-compile-resources
 %{_libdir}/libkiwix.so.9*
-%{_mandir}/*/man1/kiwix*.1*
+%{_mandir}/man1/kiwix*.1*
 
 %files devel
 %{_includedir}/kiwix
