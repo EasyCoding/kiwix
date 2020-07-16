@@ -1,5 +1,5 @@
 Name: kiwix-desktop
-Version: 2.0.3
+Version: 2.0.4
 Release: 1%{?dist}
 
 License: GPLv3+
@@ -64,6 +64,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Thu Jul 16 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.4-1
+- Updated to version 2.0.4.
+
 * Fri Jul 03 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.3-1
 - Updated to version 2.0.3.
 
