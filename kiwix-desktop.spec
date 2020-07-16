@@ -37,7 +37,7 @@ which.
 %prep
 %autosetup -p1
 mkdir %{_vpath_builddir}
-sed -e "/static {/,+2d" -e "/git describe/c\DEFINES += GIT_VERSION='%{version}'" -e "s/shell date/shell date +\%G-\%m-\%d/g" -i %{name}.pro
+sed -e "/static {/,+2d" -e "/VERSION=/c\DEFINES += VERSION=\"%{version}-%{release}\"" -i %{name}.pro
 rm -rf subprojects
 
 %build
