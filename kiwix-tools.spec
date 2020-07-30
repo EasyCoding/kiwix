@@ -1,6 +1,6 @@
 Name: kiwix-tools
 Version: 3.1.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -39,6 +39,9 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.1.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Fri Jul 03 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-1
 - Updated to version 3.1.2.
 
