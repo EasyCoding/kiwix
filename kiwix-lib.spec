@@ -1,12 +1,15 @@
 Name: kiwix-lib
 Version: 9.3.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
 
 URL: https://github.com/kiwix/%{name}
 Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+
+# https://github.com/kiwix/kiwix-lib/pull/412
+Patch100: %{name}-crash-fix.patch
 
 BuildRequires: libmicrohttpd-devel
 BuildRequires: mustache-devel
@@ -59,6 +62,9 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Wed Aug 26 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 9.3.1-3
+- Fixed crash on exit.
+
 * Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 9.3.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
