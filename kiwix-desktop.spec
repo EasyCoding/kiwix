@@ -37,7 +37,7 @@ which.
 %prep
 %autosetup -p1
 mkdir %{_vpath_builddir}
-sed -e "/static {/,+2d" -e "/VERSION=/c\DEFINES += VERSION=\"%{version}-%{release}\"" -i %{name}.pro
+sed -e "/static {/,+2d" -e "/VERSION=/c\DEFINES += VERSION=\"%{version}\"" -i %{name}.pro
 rm -rf subprojects
 
 %build
