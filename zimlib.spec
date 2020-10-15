@@ -11,6 +11,7 @@ URL: https://github.com/openzim/%{appname}
 Source0: %{url}/archive/%{version}.tar.gz
 
 BuildRequires: xapian-core-devel
+BuildRequires: libzstd-devel
 BuildRequires: libicu-devel
 BuildRequires: gtest-devel
 BuildRequires: ninja-build
