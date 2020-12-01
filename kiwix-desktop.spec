@@ -25,6 +25,7 @@ BuildRequires: qt5-linguist
 BuildRequires: gcc-c++
 BuildRequires: aria2
 BuildRequires: gcc
+BuildRequires: make
 
 # Required qt5-qtwebengine is not available on some arches.
 ExclusiveArch: %{qt5_qtwebengine_arches}
