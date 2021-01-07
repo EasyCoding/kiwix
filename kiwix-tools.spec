@@ -1,6 +1,6 @@
 Name: kiwix-tools
 Version: 3.1.2
-Release: 3%{?dist}
+Release: 4%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -39,6 +39,9 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
+* Thu Jan  7 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-4
+- Rebuilt due to kiwix-lib update.
+
 * Thu Oct 15 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-3
 - Rebuilt due to kiwix-lib update.
 
