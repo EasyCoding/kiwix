@@ -54,7 +54,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
-* Thu Jan  7 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 6.3.0-1
+* Thu Jan 07 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 6.3.0-1
 - Updated to version 6.3.0.
 
 * Thu Oct 15 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 6.2.2-1

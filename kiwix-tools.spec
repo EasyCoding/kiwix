@@ -39,7 +39,7 @@ tools.
 %{_mandir}/*/man1/kiwix*.1*
 
 %changelog
-* Thu Jan  7 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-4
+* Thu Jan 07 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-4
 - Rebuilt due to kiwix-lib update.
 
 * Thu Oct 15 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 3.1.2-3
