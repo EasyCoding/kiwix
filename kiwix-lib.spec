@@ -16,6 +16,7 @@ BuildRequires: libicu-devel
 BuildRequires: zimlib-devel
 BuildRequires: gtest-devel
 BuildRequires: ninja-build
+BuildRequires: zlib-devel
 BuildRequires: gcc-c++
 BuildRequires: meson
 BuildRequires: cmake
