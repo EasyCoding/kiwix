@@ -1,6 +1,6 @@
 Name: kiwix-desktop
 Version: 2.0.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.5-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Thu Jan 07 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.5-1
 - Updated to version 2.0.5.
 
