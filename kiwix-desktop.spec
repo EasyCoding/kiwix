@@ -1,6 +1,6 @@
 Name: kiwix-desktop
 Version: 2.0.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -29,6 +29,9 @@ BuildRequires: make
 
 # Required qt5-qtwebengine is not available on some arches.
 ExclusiveArch: %{qt5_qtwebengine_arches}
+
+# https://github.com/kiwix/kiwix-desktop/pull/589
+Patch100: %{name}-always-use-https.patch
 
 %description
 The Kiwix-desktop is a view/manager of zim files for GNU/Linux
@@ -65,6 +68,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Wed Feb 10 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.5-3
+- Always use HTTPS for the catalog downloads.
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 

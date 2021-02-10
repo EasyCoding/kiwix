@@ -1,0 +1,117 @@
+From 0e82bd44a9158f5a714fc07a85d45b5a6fae588c Mon Sep 17 00:00:00 2001
+From: Emmanuel Engelhart <kelson@kiwix.org>
+Date: Thu, 4 Feb 2021 10:25:38 +0100
+Subject: [PATCH 1/4] About links with https:// if possible
+
+---
+ resources/texts/about.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/resources/texts/about.html b/resources/texts/about.html
+index 1e30615..dd5a4e4 100644
+--- a/resources/texts/about.html
++++ b/resources/texts/about.html
+@@ -4,7 +4,7 @@
+ <img src="qrc:/icons/kiwix/scalable/kiwix-desktop.svg" height="240" width="240" style="float:right"/>
+ <h1>{{KIWIX_DESKTOP_TITLE}}</h1>
+ <p>{{KIWIX_DESKTOP_DESCRIPTION}}</p>
+-<p><a href="http://kiwix.org">{{LEARN_MORE_ABOUT_KIWIX}}</a></p>
++<p><a href="https://kiwix.org">{{LEARN_MORE_ABOUT_KIWIX}}</a></p>
+ <h2>{{RELEASE}}</h2>
+ <p>{{SOURCE_CODE}}</p>
+ <p>{{VERSION_TXT}}</p>
+@@ -13,7 +13,7 @@ <h2>{{REPORTING_PROBLEM}}</h2>
+ <p>{{REPORT_ISSUE_2}}</p>
+ <h2>{{LIBRARIES}}</h2>
+ <ul>
+-<li>Libzim - GPLv3 (<a href="http://www.openzim.org">openzim.org</a>)</li>
++<li>Libzim - GPLv3 (<a href="https://openzim.org">openzim.org</a>)</li>
+ <li>Libkiwix - GPLv3 (<a href="https://github.com/kiwix/kiwix-lib">https://github.com/kiwix/kiwix-lib</a>)</li>
+ <li>Qt - LGPLv3 (<a href="https://qt.io">qt.io</a>)</li>
+ <li>Xapian - GPL (<a href="https://xapian.org">xapian.org</a>)</li>
+
+From 732c6c3904c402008f7f159ee1043cd7f09f4c25 Mon Sep 17 00:00:00 2001
+From: Emmanuel Engelhart <kelson@kiwix.org>
+Date: Thu, 4 Feb 2021 10:26:59 +0100
+Subject: [PATCH 2/4] Screenshot links with https://
+
+---
+ resources/org.kiwix.desktop.appdata.xml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/resources/org.kiwix.desktop.appdata.xml b/resources/org.kiwix.desktop.appdata.xml
+index e0a2f63..9212e60 100644
+--- a/resources/org.kiwix.desktop.appdata.xml
++++ b/resources/org.kiwix.desktop.appdata.xml
+@@ -26,13 +26,13 @@
+   <update_contact>mgautier_AT_kymeria.fr</update_contact>
+   <screenshots>
+     <screenshot type="default">
+-      <image>http://download.kiwix.org/screenshots/kiwix_desktop_library.png</image>
++      <image>https://download.kiwix.org/screenshots/kiwix_desktop_library.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>http://download.kiwix.org/screenshots/kiwix_desktop_remote_library.png</image>
++      <image>https://download.kiwix.org/screenshots/kiwix_desktop_remote_library.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>http://download.kiwix.org/screenshots/kiwix_desktop_ted.png</image>
++      <image>https://download.kiwix.org/screenshots/kiwix_desktop_ted.png</image>
+     </screenshot>
+   </screenshots>
+ </component>
+
+From 95914e46a839ebccae93d764fc53e09158b1dce3 Mon Sep 17 00:00:00 2001
+From: Emmanuel Engelhart <kelson@kiwix.org>
+Date: Thu, 4 Feb 2021 10:29:35 +0100
+Subject: [PATCH 3/4] Use https:// to downlaod the favicon online
+
+---
+ resources/texts/_contentManager.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/resources/texts/_contentManager.html b/resources/texts/_contentManager.html
+index 1c94537..d02e8d2 100644
+--- a/resources/texts/_contentManager.html
++++ b/resources/texts/_contentManager.html
+@@ -40,7 +40,7 @@
+       <details v-for="book in displayedBooks(books, displayedBooksNb)" class="book">
+         <summary v-bind:id="book.id" class="tablerow book-summary">
+           <span class="tablecell cell0">
+-            <img v-if="book.faviconUrl" v-bind:src="'http://' + book.faviconUrl" />
++            <img v-if="book.faviconUrl" v-bind:src="'https://' + book.faviconUrl" />
+             <img v-else-if="book.faviconMimeType" v-bind:src="'zim://' + book.id + '.favicon.meta'" />
+           </span>
+           <span class="tablecell cell1">
+
+From 4e007146d734fdec6c0121592e8a6534dd065d36 Mon Sep 17 00:00:00 2001
+From: Emmanuel Engelhart <kelson@kiwix.org>
+Date: Thu, 4 Feb 2021 10:43:24 +0100
+Subject: [PATCH 4/4] Use OPDS stream via HTTPs
+
+---
+ src/opdsrequestmanager.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/opdsrequestmanager.cpp b/src/opdsrequestmanager.cpp
+index 5f632f7..9947e7b 100644
+--- a/src/opdsrequestmanager.cpp
++++ b/src/opdsrequestmanager.cpp
+@@ -8,7 +8,7 @@ OpdsRequestManager::OpdsRequestManager()
+ }
+ 
+ #define CATALOG_HOST "library.kiwix.org"
+-#define CATALOG_PORT 80
++#define CATALOG_PORT 443
+ void OpdsRequestManager::doUpdate(const QString& currentLanguage, const QString& categoryFilter)
+ {
+     QUrlQuery query;
+@@ -32,7 +32,7 @@ void OpdsRequestManager::doUpdate(const QString& currentLanguage, const QString&
+ 
+ 
+     QUrl url;
+-    url.setScheme("http");
++    url.setScheme("https");
+     url.setHost(CATALOG_HOST);
+     url.setPort(CATALOG_PORT);
+     url.setPath("/catalog/search");
