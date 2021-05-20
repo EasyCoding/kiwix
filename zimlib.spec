@@ -2,7 +2,7 @@
 
 Name: zimlib
 Version: 6.3.0
-Release: 3%{?dist}
+Release: 5%{?dist}
 
 License: GPLv2 and ASL 2.0 and BSD
 Summary: Reference implementation of the ZIM specification
@@ -54,6 +54,12 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %{_libdir}/pkgconfig/%{appname}.pc
 
 %changelog
+* Thu May 20 2021 Pete Walter <pwalter@fedoraproject.org> - 6.3.0-5
+- Rebuild for ICU 69
+
+* Wed May 19 2021 Pete Walter <pwalter@fedoraproject.org> - 6.3.0-4
+- Rebuild for ICU 69
+
 * Tue Mar 30 2021 Jonathan Wakely <jwakely@redhat.com> - 6.3.0-3
 - Rebuilt for removed libstdc++ symbol (#1937698)
 

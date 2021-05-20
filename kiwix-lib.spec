@@ -1,6 +1,6 @@
 Name: kiwix-lib
 Version: 9.4.1
-Release: 2%{?dist}
+Release: 4%{?dist}
 
 License: GPLv3+
 Summary: Common code base for all Kiwix ports
@@ -60,6 +60,12 @@ sed -e 's/pugixml //g' -i %{buildroot}%{_libdir}/pkgconfig/kiwix.pc
 %{_libdir}/pkgconfig/kiwix.pc
 
 %changelog
+* Thu May 20 2021 Pete Walter <pwalter@fedoraproject.org> - 9.4.1-4
+- Rebuild for ICU 69
+
+* Wed May 19 2021 Pete Walter <pwalter@fedoraproject.org> - 9.4.1-3
+- Rebuild for ICU 69
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 9.4.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
