@@ -1,6 +1,6 @@
 Name: kiwix-desktop
 Version: 2.0.5
-Release: 3%{?dist}
+Release: 4%{?dist}
 
 License: GPLv3+
 Summary: Kiwix desktop application
@@ -11,6 +11,7 @@ Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 Requires: hicolor-icon-theme
 Requires: shared-mime-info
 Requires: aria2%{?_isa}
+Requires: qt5-qtsvg%{?_isa}
 
 BuildRequires: qtsingleapplication-qt5-devel
 BuildRequires: qt5-qtwebengine-devel
@@ -68,6 +69,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 
 %changelog
+* Sun Jun 27 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.5-4
+- Added explicit dependency on qt5-qtsvg.
+
 * Wed Feb 10 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 2.0.5-3
 - Always use HTTPS for the catalog downloads.
 
